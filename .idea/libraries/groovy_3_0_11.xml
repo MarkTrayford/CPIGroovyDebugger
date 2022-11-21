@@ -1,0 +1,64 @@
+<component name="libraryTable">
+  <library name="groovy-3.0.11" type="groovy-sdk">
+    <properties version="3.0.11" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/groovy-datetime-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-astbuilder-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-dateutil-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-ant-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-cli-picocli-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-bsf-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-groovydoc-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-docgenerator-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-cli-commons-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-jsr223-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-jmx-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-json-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-templates-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-sql-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-servlet-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-macro-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-nio-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-yaml-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-groovysh-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-test-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-xml-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-swing-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-testng-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-console-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-test-junit5-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-3.0.11.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../temp/CPIJARS" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/groovy-astbuilder-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-ant-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-cli-commons-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-cli-picocli-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-bsf-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-docgenerator-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-datetime-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-dateutil-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-groovydoc-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-console-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-jmx-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-jsr223-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-json-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-macro-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-nio-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-groovysh-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-sql-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-servlet-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-templates-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-test-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-test-junit5-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-swing-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-xml-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-yaml-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-3.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-testng-3.0.11-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../temp/CPIJARS" recursive="false" />
+  </library>
+</component>
