@@ -60,8 +60,14 @@ static void main(String[] args) {
     println("Getting Files")
   def folder = "C:/temp/vmap/";
   def dir = new File(folder)
+  Random random = new Random()
   dir.eachFileMatch(FileType.FILES, ~/.*\.valuemap/ ) {
-    println it.name
+
+    fname = folder + it.name
+    println fname
+    File initialFile = new File( fname );
+    InputStream targetStream = new FileInputStream(initialFile);
+    vmStore.loadValueMapping( random.nextInt(999999 ) , targetStream);
   }
 //  dir.eachFileMatch(FileType.ANY) {
 //  dir.each {
@@ -70,13 +76,13 @@ static void main(String[] args) {
   println("=====================================")
 
 
-  File initialFile = new File("C:/temp/vmap/text2.valuemap");
-  InputStream targetStream = new FileInputStream(initialFile);
-  vmStore.loadValueMapping(2342434, targetStream);
-
-  initialFile = new File("C:/temp/vmap/testvaluemap.valuemap");
-  targetStream = new FileInputStream(initialFile);
-  vmStore.loadValueMapping(345345345, targetStream);
+//  File initialFile = new File("C:/temp/vmap/text2.valuemap");
+//  InputStream targetStream = new FileInputStream(initialFile);
+//  vmStore.loadValueMapping(2342434, targetStream);
+//
+//  initialFile = new File("C:/temp/vmap/testvaluemap.valuemap");
+//  targetStream = new FileInputStream(initialFile);
+//  vmStore.loadValueMapping(345345345, targetStream);
 
   ITApiFactory  factory = new ITApiFactory();
  // def ValueMappingApiService service = new ValueMappingApiService();

@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bc46f79-82ca-42de-86b2-b45b312ca518" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/ExampleofXMLValmappayload.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/downloadedvalmap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/exampleofJSONVALMAPpayload.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/factoryregistry.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/secondvalmap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ITApiFactory.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyBundle.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bundleContext.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
+    <list default="true" id="2bc46f79-82ca-42de-86b2-b45b312ca518" name="Changes" comment="upto reading the valuemap  directory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.groovy" afterDir="false" />
     </list>
@@ -82,6 +73,21 @@
       <option name="presentableId" value="Default" />
       <updated>1669023662463</updated>
     </task>
+    <task id="LOCAL-00001" summary="upto reading the valuemap  directory">
+      <created>1669325307013</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669325307013</updated>
+    </task>
+    <task id="LOCAL-00002" summary="upto reading the valuemap  directory">
+      <created>1669325396459</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669325396459</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +100,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upto reading the valuemap  directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="upto reading the valuemap  directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
