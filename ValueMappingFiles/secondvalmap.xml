@@ -1,0 +1,38 @@
+<vm version="2.0">
+    <group id="1">
+        <entry>
+            <agency>ag2</agency>
+            <schema>id1</schema>
+            <value>this</value>
+        </entry>
+        <entry>
+            <agency>ag2</agency>
+            <schema>id2</schema>
+            <value>that</value>
+        </entry>
+    </group>
+    <group id="2">
+        <entry>
+            <agency>ag1</agency>
+            <schema>id1</schema>
+            <value>fromone</value>
+        </entry>
+        <entry>
+            <agency>ag2</agency>
+            <schema>id2</schema>
+            <value>tothis1</value>
+        </entry>
+    </group>
+    <group id=3">
+        <entry>
+            <agency>ag1</agency>
+            <schema>id1</schema>
+            <value>fromtwo</value>
+        </entry>
+        <entry>
+            <agency>ag2</agency>
+            <schema>id2</schema>
+            <value>tothis2</value>
+        </entry>
+    </group>
+</vm>

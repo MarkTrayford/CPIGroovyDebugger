@@ -1,0 +1,27 @@
+<vm version="2.0">
+    <group id="a58ca0fedbe8e7a0cc136f60aea84c31">
+        <entry>
+            <agency>ag1</agency>
+            <schema>id1</schema>
+            <value>fromone</value>
+        </entry>
+        <entry>
+            <agency>ag2</agency>
+            <schema>id2</schema>
+            <value>tothis1</value>
+        </entry>
+    </group>
+    <group id="e372bbbc4adc0ba7e0cf50bd85ce8090">
+        <entry>
+            <agency>ag1</agency>
+            <schema>id1</schema>
+            <value>fromtwo</value>
+        </entry>
+        <entry>
+            <agency>ag2</agency>
+            <schema>id2</schema>
+            <value>tothis2</value>
+        </entry>
+    </group>
+</vm>
+

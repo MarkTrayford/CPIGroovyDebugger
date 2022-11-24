@@ -1,0 +1,36 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps('a58ca0fedbe8e7a0cc136f60aea84c31')",
+          "uri": "https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps('a58ca0fedbe8e7a0cc136f60aea84c31')",
+          "type": "com.sap.hci.api.ValMap"
+        },
+        "Id": "a58ca0fedbe8e7a0cc136f60aea84c31",
+        "Value": {
+          "__metadata": {
+            "type": "com.sap.hci.api.Value"
+          },
+          "SrcValue": "fromone",
+          "TgtValue": "tothis1"
+        }
+      },
+      {
+        "__metadata": {
+          "id": "https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps('e372bbbc4adc0ba7e0cf50bd85ce8090')",
+          "uri": "https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps('e372bbbc4adc0ba7e0cf50bd85ce8090')",
+          "type": "com.sap.hci.api.ValMap"
+        },
+        "Id": "e372bbbc4adc0ba7e0cf50bd85ce8090",
+        "Value": {
+          "__metadata": {
+            "type": "com.sap.hci.api.Value"
+          },
+          "SrcValue": "fromtwo",
+          "TgtValue": "tothis2"
+        }
+      }
+    ]
+  }
+}

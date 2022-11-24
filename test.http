@@ -1,0 +1,5 @@
+POST https://intsuite-56c025by.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/test
+Authorization: Basic mark.trayford@edenhousesolutions.co.uk:uxvH2F7mclmTWxpjk1FU
+
+###
+https://intsuite-56c025by.integrationsuite-trial01.cfapps.us10-001.hana.ondemand.com/shell/monitoring/Artifacts/%7B%22type%22%3A%22ALL%22%2C%22status%22%3A%22ALL%22%7D

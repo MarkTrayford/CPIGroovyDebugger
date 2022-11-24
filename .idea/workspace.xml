@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bc46f79-82ca-42de-86b2-b45b312ca518" name="Changes" comment="" />
+    <list default="true" id="2bc46f79-82ca-42de-86b2-b45b312ca518" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/ExampleofXMLValmappayload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/downloadedvalmap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/exampleofJSONVALMAPpayload.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/factoryregistry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ValueMappingFiles/secondvalmap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ITApiFactory.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MyBundle.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bundleContext.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.groovy" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,28 +25,53 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2HqrlvI9LSRaITlTTuygdE5xNrf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/mark.trayford/IdeaProjects/groovyfirstattempt",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/temp/CPIJARS&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;XML&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mark.trayford\IdeaProjects\groovyfirstattempt" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mark.trayford\IdeaProjects\groovyfirstattempt\ValueMappingFiles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CPI" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="groovyfirstattempt" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/Main.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="Hello" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,11 +102,6 @@
           <url>jar://$PROJECT_DIR$/../../../../temp/CPIJARS/pax-logging-api-1.11.13.jar!/org/ops4j/pax/logging/slf4j/Slf4jLoggerFactory.class</url>
           <line>26</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.groovy</url>
-          <line>103</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

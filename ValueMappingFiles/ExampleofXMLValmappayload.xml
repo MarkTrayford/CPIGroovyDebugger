@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xml:base="https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/">
+    <id>https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps</id>
+    <title type="text">ValMaps</title>
+    <updated>2022-11-24T12:09:54.646Z</updated>
+    <author>
+        <name/>
+    </author>
+    <link href="ValMaps" rel="self" title="ValMaps"/>
+    <entry>
+        <id>https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps('a58ca0fedbe8e7a0cc136f60aea84c31')</id>
+        <title type="text">ValMaps</title>
+        <updated>2022-11-24T12:09:54.646Z</updated>
+        <category term="com.sap.hci.api.ValMap" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+        <link href="ValMaps('a58ca0fedbe8e7a0cc136f60aea84c31')" rel="edit" title="ValMap"/>
+        <content type="application/xml">
+            <m:properties>
+                <d:Id>a58ca0fedbe8e7a0cc136f60aea84c31</d:Id>
+                <d:Value m:type="com.sap.hci.api.Value">
+                    <d:SrcValue>fromone</d:SrcValue>
+                    <d:TgtValue>tothis1</d:TgtValue>
+                </d:Value>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id>https://intsuite-56c025by.it-cpitrial06.cfapps.us10-001.hana.ondemand.com:443/api/v1/ValMaps('e372bbbc4adc0ba7e0cf50bd85ce8090')</id>
+        <title type="text">ValMaps</title>
+        <updated>2022-11-24T12:09:54.646Z</updated>
+        <category term="com.sap.hci.api.ValMap" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+        <link href="ValMaps('e372bbbc4adc0ba7e0cf50bd85ce8090')" rel="edit" title="ValMap"/>
+        <content type="application/xml">
+            <m:properties>
+                <d:Id>e372bbbc4adc0ba7e0cf50bd85ce8090</d:Id>
+                <d:Value m:type="com.sap.hci.api.Value">
+                    <d:SrcValue>fromtwo</d:SrcValue>
+                    <d:TgtValue>tothis2</d:TgtValue>
+                </d:Value>
+            </m:properties>
+        </content>
+    </entry>
+</feed>

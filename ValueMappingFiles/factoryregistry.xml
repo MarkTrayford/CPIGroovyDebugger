@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" name="com.sap.it.api.impl.ITApiFactoryRegistry" immediate="true">
+    <implementation class="com.sap.it.api.impl.ITApiFactoryRegistry"/>
+    <reference name="ITApiHandler" cardinality="0..n" policy="dynamic" interface="com.sap.it.spi.ITApiHandler" bind="bindApiFactory" unbind="unbindApiFactory" policy-option="reluctant"/>
+</scr:component>
