@@ -32,6 +32,7 @@ import groovy.io.FileType
 
 static void main(String[] args) {
 
+    // just a message at the top
 
     def Message message = new MessageImpl()
 
@@ -104,6 +105,7 @@ message
 }
 
 def void outputMessageLogProps(Message message) {
+
 
     println("Body:")
     println(message.body)
