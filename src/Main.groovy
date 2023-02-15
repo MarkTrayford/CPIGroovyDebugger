@@ -1,9 +1,20 @@
 
 import com.sap.gateway.ip.core.customdev.util.Message;
 import com.sap.gateway.ip.core.customdev.processor.MessageImpl
+import com.sap.it.op.agent.api.Exchange
 import com.sap.it.op.agent.collector.camel.impl.MplAttachmentWriterImpl
 import com.sap.it.op.agent.mpl.factory.impl.MessageLogFactoryImpl
+import org.apache.camel.Attachment
+import org.apache.camel.CamelContext
+import org.apache.camel.InvalidPayloadException
+import org.apache.camel.impl.DefaultCamelContext
+import org.apache.camel.impl.DefaultExchange
+import org.apache.cxf.message.ExchangeImpl
 import org.osgi.framework.*
+import org.apache.camel.Exchange
+
+import javax.activation.DataHandler
+import java.util.function.Supplier;
 
 //import org.apache.commons.io.FileUtils
 //import java.nio.file.Files
@@ -17,7 +28,7 @@ import com.sap.it.api.mapping.ValueMappingApi
 
 import com.sap.xi.mapping.camel.valmap.*;
 
-//import com.sap.it.api.impl.ITApiFactoryRegistry;
+import com.sap.it.api.impl.ITApiFactoryRegistry;
 
 import groovy.io.FileType;
 
@@ -25,19 +36,12 @@ import groovy.io.FileType;
 
     static void main(String[] args) {
 
-        // ##Maybe allow for passing arguments..
-        //println args
-        // ## Get input from console if needed
-        //println "Input something"
-        //println "Your input was ${System.in.newReader().readLine()}"
-
         // Define the message object
-        //def CamelContext camelContext = new DefaultCamelContext()
-        //def Splitter splitter = new Splitter();
-        //def Exchange exchange = new ExchangeImpl()  // Not sure if we need the exchange for anything
+        def CamelContext camelContext = new DefaultCamelContext()
+        def Exchange exchange = new DefaultExchange(camelContext)  // Not sure if we need the exchange for anything
+        org.apache.camel.Message camelMessage = new org.apache.camel.impl.DefaultMessage(camelContext)
+        def Message message = new MessageImpl(exchange)
 
-
-        def Message message = new MessageImpl()
 
         // Set up the content of the message properties/mapping/logs
         CreateValueMappings();
@@ -45,17 +49,19 @@ import groovy.io.FileType;
         ReadProperties(message)
         //outputMessageLogProps(message);
 
+        //processData(message);
 
-/// **** If no class is defined in the script then the class name is the name of the file eg scriptxyz.groovy makes a scriptxyz class
-
+        /// **** If no class is defined in the script then the class name is the name of the file eg scriptxyz.groovy makes a scriptxyz class
         // The files are saved with the ScriptCollection or Flow as the folder name
-        // MyScriptCollectio
+        // MyScriptCollection
         //    -- MyScriptCollection_script1.groovy ( = script1.groovy ) they have to have a unique filename as this is the class
+        //    -- MyScriptCollection_script2.groovy ( = script1.groovy ) they have to have a unique filename as this is the class
 
-        def instance1 = new FirstTest_script1()
-        instance1.processData(message);
+      // def instance1 = new FirstTest_script1()
+       // instance1.processData(message);
 
         // Read the meta file to get the name of the selected script for debugging
+        // Format is :    MyScriptCollection:Script1:processData ( collectionname:filename:functionname )
         String metaDataFile = 'C:/temp/CPIDataDump/Debug/processMetaData.process'
         def file = new File(metaDataFile)
         def contents = file.text
@@ -64,6 +70,8 @@ import groovy.io.FileType;
         // Create an instance of the class dynamically ( class is the same as filename = collection_script.groovy )
         def classname = dirName + "_" + classSection;
         println "classname = $classname"
+
+        // Create an instance of the class then execute the function within
         def instance = this.class.classLoader.loadClass( classname, true, false )?.newInstance()
         instance.invokeMethod(functionName, message)
 
@@ -94,8 +102,9 @@ import groovy.io.FileType;
     def Message processData(Message message) {
         //Body
 
+        println('Exchange ' + message.payload.getClass() )
         println('Im in the script xxx')
-        def body = message.getBody();
+        def body = message.getBody(String.class);
         println(body)
         message.setBody("Body is modified");
 
