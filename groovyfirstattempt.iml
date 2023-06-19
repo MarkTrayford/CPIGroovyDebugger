@@ -2,6 +2,12 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
+    <content url="file://C:/CPIViewer">
+      <sourceFolder url="file://C:/CPIViewer" isTestSource="false" />
+      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/FirstTest" isTestSource="false" />
+      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/MT_LAYOUT_TEST2" isTestSource="false" />
+      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/MyScriptCollection" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />

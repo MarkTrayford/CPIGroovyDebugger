@@ -7,8 +7,10 @@ import com.sap.it.op.agent.mpl.factory.impl.MessageLogFactoryImpl
 import org.apache.camel.Attachment
 import org.apache.camel.CamelContext
 import org.apache.camel.InvalidPayloadException
+import org.apache.camel.TypeConverter
 import org.apache.camel.impl.DefaultCamelContext
 import org.apache.camel.impl.DefaultExchange
+import org.apache.camel.spi.TypeConverterRegistry
 import org.apache.cxf.message.ExchangeImpl
 import org.osgi.framework.*
 import org.apache.camel.Exchange
@@ -39,18 +41,32 @@ import groovy.io.FileType;
         // Define the message object
         def CamelContext camelContext = new DefaultCamelContext()
         def Exchange exchange = new DefaultExchange(camelContext)  // Not sure if we need the exchange for anything
-        org.apache.camel.Message camelMessage = new org.apache.camel.impl.DefaultMessage(camelContext)
-        def Message message = new MessageImpl(exchange)
 
+        // Need to work out the diffence between the camelMessage and SAP version
+        org.apache.camel.Message camelMessage = new org.apache.camel.impl.DefaultMessage(camelContext)
+        //camelMessage.setBody("dummy", String.class)
+        def Message message = new MessageImpl(exchange)
+        exchange.setIn(camelMessage)
+
+        println("start convertor")
+        TypeConverterRegistry tcr = camelContext.getTypeConverterRegistry();
+//        TypeConverter tc = tcr.lookup(Document.class, InputStream.class);
+        tcr.listAllTypeConvertersFromTo();
+        //tcr.addTypeConverter(java.lang.String, java.lang.String, )
+        println("end convertor")
 
         // Set up the content of the message properties/mapping/logs
         CreateValueMappings();
         CreateMessageLogFactory();
         ReadProperties(message)
-        //outputMessageLogProps(message);
+        camelMessage.setBody(message.getBody()) // Need to do this so GetBody work, if it needs a convertor then it looks to the camelMessage
+        outputMessageLogProps(message);
+        println("body class")
+        println(message.body.class)
+        processData(message);
+        outputMessageLogProps(message);
 
-        //processData(message);
-
+        return;
         /// **** If no class is defined in the script then the class name is the name of the file eg scriptxyz.groovy makes a scriptxyz class
         // The files are saved with the ScriptCollection or Flow as the folder name
         // MyScriptCollection
@@ -93,7 +109,7 @@ import groovy.io.FileType;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Now output the props from the script
-        //outputMessageLogProps(message);
+        outputMessageLogProps(message);
 
 
 
@@ -332,6 +348,7 @@ message
         switch (_filetype) {
             case 'body':
                 _message.setBody(_Content)
+
             case ['properties', 'header']:
                 def lines = _Content.split("\n")
                 lines.each { line ->
