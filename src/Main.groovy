@@ -56,6 +56,7 @@ import groovy.io.FileType;
         println("end convertor")
 
         // Set up the content of the message properties/mapping/logs
+        createvmapdummy();
         CreateValueMappings();
         CreateMessageLogFactory();
         ReadProperties(message)
@@ -112,6 +113,15 @@ import groovy.io.FileType;
         outputMessageLogProps(message);
 
 
+
+    }
+
+// Create a dummy value map file with a random guid
+// This is needed as the value map api will not work without a value map file
+    def void createvmapdummy() {
+        def dummyfilecontent = "<vm version=\"2.0\"><group id=\"117ab65bb4e8deb73e71ef2d21686bbb\"></group></vm>"
+        def dummyfile = new File("C:/temp/vmap/dummy.valuemap")
+        dummyfile.write(dummyfilecontent)
 
     }
 
