@@ -63,23 +63,23 @@ import groovy.io.FileType;
         camelMessage.setBody(message.getBody()) // Need to do this so GetBody work, if it needs a convertor then it looks to the camelMessage
         outputMessageLogProps(message);
         println("body class")
-        println(message.body.class)
-        processData(message);
-        outputMessageLogProps(message);
+        //println(message.body.class)
+        //processData(message);
+        //outputMessageLogProps(message);
+        //return;
 
-        return;
         /// **** If no class is defined in the script then the class name is the name of the file eg scriptxyz.groovy makes a scriptxyz class
         // The files are saved with the ScriptCollection or Flow as the folder name
         // MyScriptCollection
-        //    -- MyScriptCollection_script1.groovy ( = script1.groovy ) they have to have a unique filename as this is the class
-        //    -- MyScriptCollection_script2.groovy ( = script1.groovy ) they have to have a unique filename as this is the class
+        //    -- MyScriptCollection_script1.groovy ( = FirstTest_script1.groovy ) they have to have a unique filename as this is the class
+        //    -- MyScriptCollection_script2.groovy ( = FirstTest_script1.groovy ) they have to have a unique filename as this is the class
 
       // def instance1 = new FirstTest_script1()
        // instance1.processData(message);
 
         // Read the meta file to get the name of the selected script for debugging
         // Format is :    MyScriptCollection:Script1:processData ( collectionname:filename:functionname )
-        String metaDataFile = 'C:/temp/CPIDataDump/Debug/processMetaData.process'
+        String metaDataFile = 'C:/CPIViewer/DataDump/Debug/processMetaData.process'
         def file = new File(metaDataFile)
         def contents = file.text
         def (dirName, scriptFile, functionName) = contents.tokenize(":")
@@ -92,6 +92,8 @@ import groovy.io.FileType;
         def instance = this.class.classLoader.loadClass( classname, true, false )?.newInstance()
         instance.invokeMethod(functionName, message)
 
+        println("****  After function call")
+        outputMessageLogProps(message);
         //Binding b  = new Binding([ITApiFactory: ITApiFactory])
         //b.setVariable(ITApiFactory, ITApiFactory)
 
@@ -102,15 +104,15 @@ import groovy.io.FileType;
 //        println("Calling function" + functionName)
 //        GroovyShell shell = new GroovyShell()
 //        // Change the script so it doesn't import the standard sap ITApifactory, that will force it to use the fake one from this folder
-//        def script1 = shell.parse(new File(fileName).text.replace("import com.sap.it.api.ITApiFactory", "//import com.sap.it.api.ITApiFactory"))
-//        script1.processData(message)
+//        def FirstTest_script1 = shell.parse(new File(fileName).text.replace("import com.sap.it.api.ITApiFactory", "//import com.sap.it.api.ITApiFactory"))
+//        FirstTest_script1.processData(message)
         // println("===Starting Script ====")
-        //  script1.invokeMethod(functionName, message)
+        //  FirstTest_script1.invokeMethod(functionName, message)
         // println("===End of Script ====")
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Now output the props from the script
-        outputMessageLogProps(message);
+
 
 
 
@@ -119,9 +121,13 @@ import groovy.io.FileType;
 // Create a dummy value map file with a random guid
 // This is needed as the value map api will not work without a value map file
     def void createvmapdummy() {
+
+  //      Files.createDirectories(Paths.get("C:/temp/vmap/"));
         def dummyfilecontent = "<vm version=\"2.0\"><group id=\"117ab65bb4e8deb73e71ef2d21686bbb\"></group></vm>"
-        def dummyfile = new File("C:/temp/vmap/dummy.valuemap")
+        def dummyfile = new File("C:/CPIViewer/DataDump/VMAP/dummy.valuemap")
+   //     dummyfile.mkdirs()
         dummyfile.write(dummyfilecontent)
+//
 
     }
 
@@ -194,7 +200,7 @@ message
         // Each file contains one value map
         // Load the data from each into the VMStore
         // ITApiFactory will then automatically use the value
-        def folder = "C:/temp/CPIDataDump/ValueMaps/";
+        def folder = "C:/CPIViewer/DataDump/VMAP/";
         def dir = new File(folder)
         Random random = new Random()
         // Random number needed for each uploaded value map file, could just be seq also if neeeded
@@ -273,33 +279,15 @@ message
     }
 
 
-
-
-    def Message processData2(Message message) {
-        //Body
-        println('Im in the script')
-//  def body = message.getBody();
-//  println(body)
-//  message.setBody(body + " Body is modified");
-//  //Headers
-//  def headers = message.getHeaders();
-//  def value = headers.get("test");
-//  println(value)
-//  //  message.setHeader("oldHeader", value + " modified");
-//  //message.setHeader("newHeader", "newHeader");
-////  //Properties
-//  def properties = message.getProperties();
-//  value = properties.get("oldProperty");
-//  message.setProperty("oldProperty", value + " modified");
-//  message.setProperty("newProperty", "newProperty");
-        return message;
-    }
-
-
     def void ReadProperties(Message message) {
 
 //  println(System.getProperty("user.dir"))
-        String zipFileName = "C:/temp/CPIDataDump/Debug/Properties/DebugProperties.zip"
+        // need to set some dummy to stop them being null, #HACK need better way to do this
+        message.setHeader( "dummy", "")
+        message.setBody( "" )
+        message.setProperty("dummy", "dummy")
+
+        String zipFileName = "C:/CPIViewer/DataDump/Debug/Properties/DebugProperties.zip"
         String inputDir = "logs"
         def outputDir = "zip"
 
@@ -338,7 +326,7 @@ message
 
         // Look for individual files
         println("Reading individual property files")
-        def folder = "C:/temp/CPIDataDump/Debug/Properties/";
+        def folder = "C:/CPIViewer/DataDump/Debug/Properties/";
         def dir = new File(folder)
         dir.listFiles().each { file ->
             println(file)

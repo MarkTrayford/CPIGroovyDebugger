@@ -4,7 +4,7 @@
     <exclude-output />
     <content url="file://C:/CPIViewer">
       <sourceFolder url="file://C:/CPIViewer" isTestSource="false" />
-      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/FirstTest" isTestSource="false" />
+      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/FirstTest" isTestSource="false" generated="true" />
       <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/MT_LAYOUT_TEST2" isTestSource="false" />
       <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/MyScriptCollection" isTestSource="false" />
     </content>

@@ -25,7 +25,7 @@ public class  MyBundle implements  Bundle {
     @Override
     URL getEntry(String s) {
         //URL url = new URL("file://./ValueMappingFile/downloadedvalmap.xml");
-        URL url = new URL("file:///C:/temp/vmap/dummy.valuemap");
+        URL url = new URL("file:///C:/CPIViewer/DataDump/VMAP/dummy.valuemap");
         return url;
     }
 
