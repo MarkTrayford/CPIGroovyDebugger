@@ -64,9 +64,9 @@ import groovy.io.FileType;
         outputMessageLogProps(message);
         println("body class")
         //println(message.body.class)
-        //processData(message);
-        //outputMessageLogProps(message);
-        //return;
+        processData(message);
+        outputMessageLogProps(message);
+        return;
 
         /// **** If no class is defined in the script then the class name is the name of the file eg scriptxyz.groovy makes a scriptxyz class
         // The files are saved with the ScriptCollection or Flow as the folder name

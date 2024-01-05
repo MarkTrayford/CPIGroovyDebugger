@@ -28,9 +28,8 @@
       <root url="jar://$PROJECT_DIR$/lib/groovy-console-3.0.11.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/groovy-test-junit5-3.0.11.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/groovy-3.0.11.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../../../temp/CPIJARS" />
-      <root url="file://$USER_HOME$/OneDrive - Accenture/Documents/CPIJARS" />
-      <root url="file://$USER_HOME$/OneDrive - Accenture/Documents/CPIJARS" />
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
@@ -61,9 +60,10 @@
       <root url="jar://$PROJECT_DIR$/lib/groovy-3.0.11-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/groovy-testng-3.0.11-sources.jar!/" />
       <root url="file://$USER_HOME$/OneDrive - Accenture/Documents/CPIJARS" />
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
     </SOURCES>
-    <jarDirectory url="file://$PROJECT_DIR$/../../../../temp/CPIJARS" recursive="false" />
-    <jarDirectory url="file://$USER_HOME$/OneDrive - Accenture/Documents/CPIJARS" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" recursive="false" type="SOURCES" />
     <jarDirectory url="file://$USER_HOME$/OneDrive - Accenture/Documents/CPIJARS" recursive="false" type="SOURCES" />
   </library>
 </component>
