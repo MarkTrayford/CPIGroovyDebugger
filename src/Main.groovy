@@ -38,82 +38,40 @@ import groovy.io.FileType;
 
     static void main(String[] args) {
 
+        // look into using args and different Run configurations to control options
+        println(args)
         // Define the message object
         def CamelContext camelContext = new DefaultCamelContext()
-        def Exchange exchange = new DefaultExchange(camelContext)  // Not sure if we need the exchange for anything
+        // The exchange is the level above a message, and contains the message
+        def Exchange exchange = new DefaultExchange(camelContext)
 
-        // Need to work out the diffence between the camelMessage and SAP version
+        // Need to work out the difference between the camelMessage and SAP version
         org.apache.camel.Message camelMessage = new org.apache.camel.impl.DefaultMessage(camelContext)
-        //camelMessage.setBody("dummy", String.class)
-        def Message message = new MessageImpl(exchange)
+
+        def Message message = new MessageImpl(exchange)  // #TODO do I still need this?
         exchange.setIn(camelMessage)
 
-        println("start convertor")
+//      convertors are needed to manage the different classes for Body, eg String , Stream and the conversions between them
+//       #TODO Can't remember where I got to with this, do I still need this
+//       #TODO Need to test getting the bodyin as a string, stream etc. so we don't have to adapt any scripts
+//        println("start convertor")
         TypeConverterRegistry tcr = camelContext.getTypeConverterRegistry();
 //        TypeConverter tc = tcr.lookup(Document.class, InputStream.class);
-        tcr.listAllTypeConvertersFromTo();
+//        tcr.listAllTypeConvertersFromTo();
         //tcr.addTypeConverter(java.lang.String, java.lang.String, )
-        println("end convertor")
-
-        // Set up the content of the message properties/mapping/logs
-        createvmapdummy();
-        CreateValueMappings();
-        CreateMessageLogFactory();
-        ReadProperties(message)
+//        println("end convertor")
+// Set up the content of the message properties/mapping/logs
+        createvmapdummy(); // Need a dummy value map to initiate the standard classes
+        CreateValueMappings(); // Read the value mapping directory and build value map in the Context
+        CreateMessageLogFactory(); // Create a MessageLog
+        ReadProperties(message) // Read file and setup properties, headers and body for the message
         camelMessage.setBody(message.getBody()) // Need to do this so GetBody work, if it needs a convertor then it looks to the camelMessage
-        outputMessageLogProps(message);
-        println("body class")
+        outputMessageLogProps(message); // Show
+        //println("body class")
         //println(message.body.class)
         processData(message);
         outputMessageLogProps(message);
         return;
-
-        /// **** If no class is defined in the script then the class name is the name of the file eg scriptxyz.groovy makes a scriptxyz class
-        // The files are saved with the ScriptCollection or Flow as the folder name
-        // MyScriptCollection
-        //    -- MyScriptCollection_script1.groovy ( = FirstTest_script1.groovy ) they have to have a unique filename as this is the class
-        //    -- MyScriptCollection_script2.groovy ( = FirstTest_script1.groovy ) they have to have a unique filename as this is the class
-
-      // def instance1 = new FirstTest_script1()
-       // instance1.processData(message);
-
-        // Read the meta file to get the name of the selected script for debugging
-        // Format is :    MyScriptCollection:Script1:processData ( collectionname:filename:functionname )
-        String metaDataFile = 'C:/CPIViewer/DataDump/Debug/processMetaData.process'
-        def file = new File(metaDataFile)
-        def contents = file.text
-        def (dirName, scriptFile, functionName) = contents.tokenize(":")
-        def ( classSection) = scriptFile.tokenize(".")
-        // Create an instance of the class dynamically ( class is the same as filename = collection_script.groovy )
-        def classname = dirName + "_" + classSection;
-        println "classname = $classname"
-
-        // Create an instance of the class then execute the function within
-        def instance = this.class.classLoader.loadClass( classname, true, false )?.newInstance()
-        instance.invokeMethod(functionName, message)
-
-        println("****  After function call")
-        outputMessageLogProps(message);
-        //Binding b  = new Binding([ITApiFactory: ITApiFactory])
-        //b.setVariable(ITApiFactory, ITApiFactory)
-
-//        String fileName = "C:/temp/CPIDataDump/Scripts/${dirName}/${scriptFile}"
-//        String fileName = "./Scripts/${dirName}/${scriptFile}"
-//        String fileName = "./scriptx.groovy"
-//        println("Getting script file from " + fileName)
-//        println("Calling function" + functionName)
-//        GroovyShell shell = new GroovyShell()
-//        // Change the script so it doesn't import the standard sap ITApifactory, that will force it to use the fake one from this folder
-//        def FirstTest_script1 = shell.parse(new File(fileName).text.replace("import com.sap.it.api.ITApiFactory", "//import com.sap.it.api.ITApiFactory"))
-//        FirstTest_script1.processData(message)
-        // println("===Starting Script ====")
-        //  FirstTest_script1.invokeMethod(functionName, message)
-        // println("===End of Script ====")
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Now output the props from the script
-
-
 
 
     }
@@ -132,7 +90,6 @@ import groovy.io.FileType;
     }
 
     def Message processData(Message message) {
-        //Body
 
         println('Exchange ' + message.payload.getClass() )
         println('Im in the script xxx')
@@ -150,18 +107,8 @@ import groovy.io.FileType;
             messageLog.addAttachmentAsString("ResponsePayload:", body, "text/plain");
         }
 
-
-        //Headers
-//  def headers = message.getHeaders();
-//  def value = headers.get("test");
-//  println(value)
-//  //  message.setHeader("oldHeader", value + " modified");
         message.setHeader("newHeader", "newHeader");
-////  //Properties
-//  def properties = message.getProperties();
-//  value = properties.get("oldProperty");
         message.setProperty("oldProperty", "modified");
-//  message.setProperty("newProperty", "newProperty");
         return message;
     }
 
@@ -255,27 +202,6 @@ message
             zos.close();
         }
 
-//  ZipEntry zipEntry = zis.getNextEntry()
-//  StringBuilder s = new StringBuilder();
-//
-//// Read each entry in the ZIP file
-//  while (zipEntry != null) {
-//
-//    s.setLength(0);
-//    println(zipEntry.name)
-//    println("-----------------------------------------------")
-//
-//    def fileindex = zipEntry.name.lastIndexOf(".")
-//    def filetype = zipEntry.name.substring(fileindex+1)
-//    println filetype;
-//
-//    // Read all of the file into a string
-//    int read = 0
-//    while ((read = zis.read(buffer, 0, 1024)) >= 0) {
-//      s.append(new String(buffer, 0, read));
-//    }
-
-
     }
 
 
@@ -366,62 +292,4 @@ message
         }
 
     }
-
-// Old code, in case I need it again, delete when finished
-
-//def unzipFile(File file) {
-//  cleanupFolder()
-//  def zipFile = new ZipFile(file)
-//  zipFile.entries().each { it ->
-//    def path = Paths.get('c:\\folder\\' + it.name)
-//    if(it.directory){
-//      Files.createDirectories(path)
-//    }
-//    else {
-//      def parentDir = path.getParent()
-//      if (!Files.exists(parentDir)) {
-//        Files.createDirectories(parentDir)
-//      }
-//      Files.copy(zipFile.getInputStream(it), path)
-//    }
-//  }
-//}
-
-
-//println(zipEntry.toString())
-//    File newFile = new File(outputDir + File.separator, zipEntry.name)
-//    if (zipEntry.isDirectory()) {
-//      if (!newFile.isDirectory() && !newFile.mkdirs()) {
-//        throw new IOException("Failed to create directory " + newFile)
-//      }
-//    } else {
-//      // fix for Windows-created archives
-//      File parent = newFile.parentFile
-//      if (!parent.isDirectory() && !parent.mkdirs()) {
-//        throw new IOException("Failed to create directory " + parent)
-//      }
-//      // write file content
-//      FileOutputStream fos = new FileOutputStream(newFile)
-//      text = zis.text;
-//      println(text)
-//      int len = 0
-
-//Zip files
-//
-//ZipOutputStream zipFile = new ZipOutputStream(new FileOutputStream(zipFileName))
-//new File(inputDir).eachFile() { file ->
-//  //check if file
-//  if (file.isFile()){
-//    zipFile.putNextEntry(new ZipEntry(file.name))
-//    def buffer = new byte[file.size()]
-//    file.withInputStream {
-//      zipFile.write(buffer, 0, it.read(buffer))
-//    }
-//    zipFile.closeEntry()
-//  }
-//}
-//zipFile.close()
-
-
-//UnZip archive
 
