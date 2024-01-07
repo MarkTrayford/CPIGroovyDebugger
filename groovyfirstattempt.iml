@@ -4,22 +4,29 @@
     <exclude-output />
     <content url="file://C:/CPIViewer">
       <sourceFolder url="file://C:/CPIViewer" isTestSource="false" />
-      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/FirstTest" isTestSource="false" generated="true" />
-      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/MT_LAYOUT_TEST2" isTestSource="false" />
-      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts/MyScriptCollection" isTestSource="false" />
+      <sourceFolder url="file://C:/CPIViewer/DataDump/Scripts" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <content url="file://C:/temp/CPIDataDump">
-      <sourceFolder url="file://C:/temp/CPIDataDump/Scripts/CalledByFirstFlow" isTestSource="false" />
-      <sourceFolder url="file://C:/temp/CPIDataDump/Scripts/FirstTest" isTestSource="false" />
-      <sourceFolder url="file://C:/temp/CPIDataDump/Scripts/MyScriptCollection" isTestSource="false" />
-    </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="groovy-3.0.11" level="project" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
+          <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

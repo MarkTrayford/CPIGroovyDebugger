@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="128216a6-7ba1-4eb4-8f38-5a3a2c1d2db0" name="Finish Value Map" comment="Changed to use a fixed process">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Scripts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Scripts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/groovy_3_0_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/groovy_3_0_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groovyfirstattempt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovyfirstattempt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CamelHelloWorldTimerExample.java" beforeDir="false" />
     </list>
     <list id="2bc46f79-82ca-42de-86b2-b45b312ca518" name="Changes" comment="valuemapping done" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +33,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MarkTrayford"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarkTrayford&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -81,7 +84,7 @@
     "kotlin-language-version-configured": "true",
     "last.edited.regexp": "hello.valuemap",
     "last_opened_file_path": "C:/Users/trayfordma/Documents/Projects/CPIJARS/CPIJARS",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",

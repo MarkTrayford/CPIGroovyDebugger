@@ -2,8 +2,14 @@
   <library name="Scripts">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../../temp/CPIDataDump/Scripts" />
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Documents/Projects/CPIJARS/CPIJARS" recursive="false" type="SOURCES" />
   </library>
 </component>
