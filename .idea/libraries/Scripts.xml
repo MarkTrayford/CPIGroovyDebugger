@@ -2,6 +2,7 @@
   <library name="Scripts">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../../temp/CPIDataDump/Scripts" />
+      <root url="file://$USER_HOME$/Documents/Projects/CPIJARS" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

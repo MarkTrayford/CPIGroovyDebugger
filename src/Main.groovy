@@ -77,6 +77,30 @@ import groovy.io.FileType;
       // def instance1 = new FirstTest_script1()
        // instance1.processData(message);
 
+
+        // #TODO
+        // Need to look in traceline.cs file of cpiviewer to understand more
+//        string processMetaData = $"{script.scriptBundleId}:{script.script}:{script.scriptFunction}";
+//        string propertyFilename = $"{MainManager.Instance.project.dataDumpDirectory}Debug/Properties/properties.properties";
+//        string headerFilename = $"{MainManager.Instance.project.dataDumpDirectory}Debug/Properties/header.header";
+//        string bodyFilename = $"{MainManager.Instance.project.dataDumpDirectory}Debug/Properties/body.body";
+//        string processMetaDataFilename = $"{MainManager.Instance.project.dataDumpDirectory}Debug/processMetaData.process";
+//        System.IO.File.WriteAllText(processMetaDataFilename, processMetaData);
+//        System.IO.File.WriteAllText(propertyFilename, property);
+//        System.IO.File.WriteAllText(headerFilename, header);
+//        System.IO.File.WriteAllText(bodyFilename, body);
+//        #TODO Here is the code that dumps the scripts from CPI viewer
+//        String scriptFolder  = flow.extractPath + "/src/main/resources/script/";
+//        String dumpFolder = MainManager.Instance.project.dataDumpDirectory + "Scripts/" + flow.flowName + "/";
+//        Directory.CreateDirectory(dumpFolder); // In case it doesnt already exist
+//        //UnityEngine.Debug.Log($"Script: Flow {scriptFolder}");
+//        if ( Directory.Exists(scriptFolder))
+//        {
+//            foreach (String file in Directory.GetFiles(scriptFolder, "*.groovy"))
+//                    {
+//                        System.IO.File.Copy(file, Path.Combine(dumpFolder, Path.GetFileName(file) ), true);
+//                    }
+//        }
         // Read the meta file to get the name of the selected script for debugging
         // Format is :    MyScriptCollection:Script1:processData ( collectionname:filename:functionname )
         String metaDataFile = 'C:/CPIViewer/DataDump/Debug/processMetaData.process'
