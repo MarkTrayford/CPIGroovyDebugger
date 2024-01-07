@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="128216a6-7ba1-4eb4-8f38-5a3a2c1d2db0" name="Finish Value Map" comment="Dynamic function call working">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Scripts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Scripts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/groovy_3_0_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/groovy_3_0_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CamelHelloWorldTimerExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groovyfirstattempt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovyfirstattempt.iml" afterDir="false" />
     </list>
     <list id="2bc46f79-82ca-42de-86b2-b45b312ca518" name="Changes" comment="valuemapping done" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +61,8 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last.edited.regexp": "hello.valuemap",
-    "last_opened_file_path": "C:/Users/trayfordma/Documents/Projects/CPIJARS",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/trayfordma/Documents/Projects/CPIJARS/CPIJARS",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
